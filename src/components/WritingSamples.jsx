@@ -42,15 +42,17 @@ const WritingSamples = () => {
               key={index}
               className="flex flex-col md:flex-row gap-6 bg-white rounded-lg border-4 border-double border-orange-400 p-6 hover:shadow-xl transition-shadow"
             >
-              <div className="md:w-1/4">
-                <img
-                  src={sample.image}
-                  alt={sample.title}
-                  className="w-full h-40 object-cover rounded-lg border-2 border-blue-300"
-                />
+              <div className="md:w-1/6 flex items-center justify-center">
+                <div className="w-24 h-24">
+                  <img
+                    src={sample.image}
+                    alt={sample.title}
+                    className="w-full h-full object-contain rounded-lg border-2 border-blue-300"
+                  />
+                </div>
               </div>
 
-              <div className="md:w-3/4">
+              <div className="md:w-5/6">
                 <h3 className="text-xl font-semibold text-blue-600 hover:text-orange-500 transition-colors mb-3">
                   {sample.title}
                 </h3>

@@ -23,7 +23,7 @@ const Hero = () => {
 
           {/* Right Column */}
           <div className="relative">
-            <div className="relative w-full h-90 ">
+            <div className="relative w-full h-90">
               <img
                 src="/mezbam.png"
                 alt="IELTS Instructor"
@@ -31,7 +31,25 @@ const Hero = () => {
                   transform hover:scale-105 transition-transform duration-300
                   drop-shadow-2xl rounded-lg border-4 border-white/50 -mt-4"
               />
+
+              {/* Instructor Details Overlays */}
+              <div className="absolute -left-4 top-8 bg-orange-500 text-white px-6 py-3 rounded-lg transform -rotate-12 shadow-lg">
+                <span className="font-bold text-2xl">IELTS 8.5</span>
+              </div>
+
+              <div className="absolute -right-2 top-1/3 bg-white/90 text-orange-500 px-6 py-3 rounded-lg transform rotate-12 shadow-lg">
+                <span className="font-bold text-xl">10+ Years Experience</span>
+              </div>
+
+              <div className="absolute left-8 bottom-16 bg-orange-500/90 text-white px-6 py-3 rounded-lg transform -rotate-6 shadow-lg">
+                <span className="font-bold text-xl">2000+ Students</span>
+              </div>
+
+              <div className="absolute right-4 bottom-24 bg-white/90 text-orange-500 px-6 py-3 rounded-lg transform rotate-6 shadow-lg">
+                <span className="font-bold text-xl">Cambridge Certified</span>
+              </div>
             </div>
+
             {/* Decorative Elements */}
             <div
               className="absolute -z-10 top-10 right-10 w-72 h-72
