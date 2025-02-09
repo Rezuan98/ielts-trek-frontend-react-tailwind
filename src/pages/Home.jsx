@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Articles from "../components/Articles";
 import LearningTools from "../components/LearningTools";
 import AIConversations from "../components/AIConversations";
-import WritingSamples from "../components/WritingSamples";
+import SampleCategories from "../components/SampleCategories";
 import IELTSTips from "../components/IELTSTips";
 import IELTSTests from "../components/IELTSTests";
 import IELTSSpeakingSamples from "../components/IELTSSpeakingSamples";
@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <Hero />
       <IELTSTests />
-      <WritingSamples />
+      <SampleCategories />
       <IELTSSpeakingSamples />
       <AIConversations />
       <IELTSTips />

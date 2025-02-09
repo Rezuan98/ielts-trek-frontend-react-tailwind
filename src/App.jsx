@@ -5,7 +5,8 @@ import Courses from "./pages/Courses";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import WritingSamplePage from "./pages/WritingSamplePage";
+import WritingSamplesPage from "./pages/WritingSamplesPage";
+import WritingTask2Page from "./pages/WritingTask2Page";
 
 function App() {
   return (
@@ -17,7 +18,12 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/writing-samples-page" element={<WritingSamplePage />} />
+          {/* <Route path="/writing-samples-page" element={<WritingSamplePage />} /> */}
+          <Route
+            path="/writing-task1-samples"
+            element={<WritingSamplesPage />}
+          />
+          <Route path="/writing-task2-samples" element={<WritingTask2Page />} />
         </Route>
       </Routes>
     </Router>

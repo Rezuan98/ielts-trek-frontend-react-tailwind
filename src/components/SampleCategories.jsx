@@ -1,51 +1,55 @@
 import { Link } from "react-router-dom";
 
-const writingSamples = [
+const sampleCategories = [
   {
-    title: "Advertising & New Products: Positive or Negative?",
+    title: "Writing Samples",
     description:
-      "This post contains ideas and band-9 sample essays for the Cambridge IELTS 16 Academic Writing Task 2 Test 2 topic...",
-    image: "ws1.png",
+      "Explore band 9 sample essays for IELTS Writing Task 1 & 2. Learn from expertly written responses covering various topics and question types.",
+    image: "/ws1.png",
+    link: "/writing-task1-samples",
     categories: ["Band-9 IELTS Writing Samples"],
-    tags: ["Band 9", "Cambridge IELTS 16 Academic", "IELTS Writing Task 2"],
+    tags: ["Task 1", "Task 2", "General", "Academic"],
   },
   {
-    title: "Interest in House History: Why & How?",
+    title: "Reading Samples",
     description:
-      "This post contains ideas and band-9 sample essays for the Cambridge IELTS 16 Academic Writing Task 2 Test 1 topic...",
-    image: "ws2.png",
-    categories: ["Band-9 IELTS Writing Samples"],
-    tags: ["Band 9", "Cambridge IELTS 16 Academic", "IELTS Writing Task 2"],
+      "Access high-scoring IELTS Reading answers with detailed explanations. Practice with authentic test materials and improve your comprehension.",
+    image: "/ws2.png",
+    link: "/reading-samples",
+    categories: ["Band-9 IELTS Reading Samples"],
+    tags: ["Academic", "General", "MCQs", "True/False/NG"],
   },
   {
-    title: "Alternative Medicine vs. Doctors: Good or Bad?",
+    title: "Speaking Samples",
     description:
-      "This post contains ideas and band-9 sample essays for the Cambridge IELTS 17 Academic Writing Task 2 Test 4 topic...",
-    image: "ws3.png",
-    categories: ["Band-9 IELTS Writing Samples"],
-    tags: ["Band 9", "Cambridge IELTS 17 Academic", "IELTS Writing Task 2"],
+      "Watch and learn from band 9 speaking responses. Get insights into all three parts of the speaking test with model answers.",
+    image: "/ws3.png",
+    link: "/speaking-samples",
+    categories: ["Band-9 IELTS Speaking Samples"],
+    tags: ["Part 1", "Part 2", "Part 3", "Cue Cards"],
   },
   {
-    title: "Ambition & Success: How Important?",
+    title: "Listening Samples",
     description:
-      "This post contains ideas and band-9 sample essays for the Cambridge IELTS 18 Academic Writing Task 2 Test 3 topic...",
-    image: "ws1.png",
-    categories: ["Band-9 IELTS Writing Samples"],
-    tags: ["Band 9", "Cambridge IELTS 18 Academic", "IELTS Writing Task 2"],
+      "Practice with sample answers for all IELTS Listening question types. Understand scoring criteria and common question patterns.",
+    image: "/ws1.png",
+    link: "/listening-samples",
+    categories: ["Band-9 IELTS Listening Samples"],
+    tags: ["Section 1", "Section 2", "Section 3", "Section 4"],
   },
 ];
 
-const WritingSamples = () => {
+const SampleCategories = () => {
   return (
     <section className="py-12 bg-gradient-to-br from-blue-50 to-orange-50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">
-          Latest IELTS Writing Samples
+          Latest IELTS Samples
         </h2>
 
-        {/* Grid Layout: 2 Columns & 2 Rows */}
+        {/* Grid Layout: 2 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {writingSamples.map((sample, index) => (
+          {sampleCategories.map((sample, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row gap-4 bg-white rounded-lg border border-orange-400 p-6 hover:shadow-xl transition-shadow"
@@ -61,9 +65,11 @@ const WritingSamples = () => {
 
               {/* Text Section */}
               <div className="md:w-3/4">
-                <h3 className="text-lg font-semibold text-blue-600 hover:text-orange-500 transition-colors mb-2">
-                  {sample.title}
-                </h3>
+                <Link to={sample.link}>
+                  <h3 className="text-lg font-semibold text-blue-600 hover:text-orange-500 transition-colors mb-2">
+                    {sample.title}
+                  </h3>
+                </Link>
                 <p className="text-gray-600 mb-3">{sample.description}</p>
 
                 {/* Categories */}
@@ -101,10 +107,10 @@ const WritingSamples = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <Link
-            to="/writing-samples-page"
+            to="/all-samples"
             className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
-            View Writing Samples
+            View All Samples
           </Link>
         </div>
       </div>
@@ -112,4 +118,4 @@ const WritingSamples = () => {
   );
 };
 
-export default WritingSamples;
+export default SampleCategories;
