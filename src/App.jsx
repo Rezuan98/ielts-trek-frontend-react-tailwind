@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WritingSamplesPage from "./pages/WritingSamplesPage";
 import WritingTask2Page from "./pages/WritingTask2Page";
+import WritingTestPage from "./pages/WritingTestPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             element={<WritingSamplesPage />}
           />
           <Route path="/writing-task2-samples" element={<WritingTask2Page />} />
+          <Route path="/writing-test" element={<WritingTestPage />} />
         </Route>
       </Routes>
     </Router>

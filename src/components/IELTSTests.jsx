@@ -18,7 +18,7 @@ const IELTSTests = () => {
     {
       title: "IELTS Writing Tests",
       image: "/it4.webp",
-      link: "#",
+      link: "/writing-test",
     },
   ];
 
