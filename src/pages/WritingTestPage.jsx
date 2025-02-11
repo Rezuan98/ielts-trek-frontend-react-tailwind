@@ -1,6 +1,6 @@
 import { useState } from "react";
-import WritingTask1 from "../pages/innerComponents/WritingTask1";
-import WritingTask2 from "../pages/innerComponents/WritingTask2";
+import WritingTask1 from "../components/WritingComponents/WritingTask1";
+import WritingTask2 from "../components/WritingComponents/WritingTask2";
 
 const WritingTestPage = () => {
   const [selectedTask, setSelectedTask] = useState(null);

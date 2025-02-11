@@ -7,32 +7,78 @@ const Navbar = () => {
 
   const navItems = {
     courses: { title: "Courses", path: "/courses" },
-    ielts: {
-      title: "IELTS",
+    reading: {
+      title: "Reading",
       subItems: {
         tests: {
-          title: "IELTS Tests",
-          subItems: ["Speaking", "Writing", "Reading", "Listening"],
+          title: "Reading Tests",
+          path: "/reading-test",
         },
-        band9: {
-          title: "Band 9 Samples",
-          subItems: ["Task 1 Samples", "Task 2 Samples", "Speaking Samples"],
+        samples: {
+          title: "Reading Samples",
+          path: "/reading-samples",
         },
-        userEssays: {
-          title: "User Essays",
-          subItems: ["Task 1 Essays", "Task 2 Essays"],
+        tips: {
+          title: "Reading Tips",
+          path: "/reading/tips",
         },
-        tips: { title: "IELTS Tips" },
-        tools: { title: "IELTS Tools" },
+      },
+    },
+    writing: {
+      title: "Writing",
+      subItems: {
+        tests: {
+          title: "Writing Tests",
+          path: "/writing-test",
+        },
+        samples: {
+          title: "Writing Samples",
+          path: "/writing-task1-samples",
+        },
+        tips: {
+          title: "Writing Tips",
+          path: "/writing/tips",
+        },
+      },
+    },
+    speaking: {
+      title: "Speaking",
+      subItems: {
+        tests: {
+          title: "Speaking Tests",
+          path: "/speaking/tests",
+        },
+        samples: {
+          title: "Speaking Samples",
+          path: "/speaking/samples",
+        },
+        tips: {
+          title: "Speaking Tips",
+          path: "/speaking/tips",
+        },
+      },
+    },
+    listening: {
+      title: "Listening",
+      subItems: {
+        tests: {
+          title: "Listening Tests",
+          path: "/listening/tests",
+        },
+        samples: {
+          title: "Listening Samples",
+          path: "/listening/samples",
+        },
+        tips: {
+          title: "Listening Tips",
+          path: "/listening/tips",
+        },
       },
     },
     practiceAI: { title: "Practice with AI", path: "/ai-practice" },
-    writing: { title: "Writing Exercise", path: "/writing" },
-    pronunciation: { title: "Pronunciation", path: "/pronunciation" },
-    dictation: { title: "Dictation/Shadowing", path: "/dictation" },
-    flashcard: { title: "Flashcard", path: "/flashcard" },
-    videos: { title: "Learn with Videos", path: "/videos" },
     tools: { title: "Tools", path: "/tools" },
+    dictation: { title: "Dictation", path: "/dictation" },
+    pronunciation: { title: "Pronunciation", path: "/pronunciation" },
   };
 
   return (
@@ -67,46 +113,15 @@ const Navbar = () => {
 
                       <div className="hidden group-hover:block absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                         <div className="relative py-2">
-                          {" "}
-                          {/* Added padding to create hover space */}
                           {Object.entries(item.subItems).map(
                             ([subKey, subItem]) => (
-                              <div key={subKey} className="relative group/sub">
-                                {subItem.subItems ? (
-                                  <div>
-                                    <button className="px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center justify-between w-full">
-                                      {subItem.title}
-                                      <ChevronDown size={16} />
-                                    </button>
-                                    <div className="hidden group-hover/sub:block absolute left-full top-0 w-48 bg-white rounded-md shadow-lg">
-                                      <div className="py-1">
-                                        {" "}
-                                        {/* Added padding for hover space */}
-                                        {subItem.subItems.map(
-                                          (subSubItem, index) => (
-                                            <Link
-                                              key={index}
-                                              to={`/${key}/${subKey}/${subSubItem
-                                                .toLowerCase()
-                                                .replace(/\s+/g, "-")}`}
-                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                                            >
-                                              {subSubItem}
-                                            </Link>
-                                          )
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                ) : (
-                                  <Link
-                                    to={`/${key}/${subKey}`}
-                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                                  >
-                                    {subItem.title}
-                                  </Link>
-                                )}
-                              </div>
+                              <Link
+                                key={subKey}
+                                to={subItem.path}
+                                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                              >
+                                {subItem.title}
+                              </Link>
                             )
                           )}
                         </div>
