@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Book, Clock, CheckCircle, ListChecks } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const ReadingSample = () => {
   const [activeTab, setActiveTab] = useState("format");

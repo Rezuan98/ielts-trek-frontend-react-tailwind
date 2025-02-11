@@ -7,6 +7,9 @@ const Navbar = () => {
 
   const navItems = {
     courses: { title: "Courses", path: "/courses" },
+
+    tests: { title: "Test", path: "/test" },
+    vocabulary: { title: "Vocabulary", path: "/vocabulary" },
     reading: {
       title: "Reading",
       subItems: {
@@ -77,8 +80,8 @@ const Navbar = () => {
     },
     practiceAI: { title: "Practice with AI", path: "/ai-practice" },
     tools: { title: "Tools", path: "/tools" },
-    dictation: { title: "Dictation", path: "/dictation" },
-    pronunciation: { title: "Pronunciation", path: "/pronunciation" },
+    blog: { title: "Blog", path: "/blog" },
+    login: { title: "Login", path: "/login" },
   };
 
   return (
